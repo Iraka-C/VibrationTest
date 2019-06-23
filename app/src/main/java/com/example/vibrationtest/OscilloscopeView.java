@@ -28,6 +28,7 @@ public class OscilloscopeView extends SurfaceView implements SurfaceHolder.Callb
 		holderT.addCallback(this);
 		holderT.setFormat(PixelFormat.TRANSLUCENT);
 		setZOrderOnTop(true);
+		setZOrderMediaOverlay(true);
 		isRendering=false;
 		bgPaint.setARGB(255,0,0,0);
 		//setZOrderMediaOverlay(true);
@@ -44,6 +45,9 @@ public class OscilloscopeView extends SurfaceView implements SurfaceHolder.Callb
 		if(holder!=null){
 			isRendering=true;
 			Canvas canvas=holder.lockCanvas();
+			if(canvas==null){
+				return;
+			}
 			canvas.drawRect(bgRect,bgPaint);
 
 			// Draw the images on the canvas

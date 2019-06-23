@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
+
 	<com.example.vibrationtest.OscilloscopeView
 		android:id="@+id/osc_view"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"/>
+
+	<LinearLayout
+		style="?android:attr/buttonBarStyle"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/vib_button"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="48dp"
+			android:layout_marginRight="48dp"
+			android:background="#00FFFFFF"
+			android:fontFamily="monospace"
+			android:text="♪ Vib"
+			android:textColor="#80FFFFFF"
+			tools:ignore="HardcodedText" />
+
+		<Button
+			android:id="@+id/rec_button"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="48dp"
+			android:layout_marginRight="48dp"
+			android:background="#00FFFFFF"
+			android:fontFamily="monospace"
+			android:text="● Rec"
+			android:textColor="#80FFFFFF"
+			tools:ignore="HardcodedText" />
+	</LinearLayout>
+
 </FrameLayout>

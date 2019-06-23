@@ -29,6 +29,11 @@ public class WaveOscilloscope implements DrawableOnSurface{
 		linePaint.setAntiAlias(true);
 	}
 
+	public WaveOscilloscope(int bufferSize,int color){
+		this(bufferSize);
+		linePaint.setColor(color);
+	}
+
 	public void setRange(float r){
 		range=r;
 	}
